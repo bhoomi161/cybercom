@@ -1,0 +1,46 @@
+==>Two ways to add javascript.
+1.Inline
+	In inline we add the content between <script></script>
+2.External
+	In external we create .js file and give this file source to the html file.
+
+==>What is Javascript?
+	Javascript is a lightweight,cross-platform,object-oriented computer programming 
+language.
+
+==>For developing website html,css and javascript are used.
+1.html:content(noun)
+2.css:presentation(adjective)
+3.javascript:dynamic effects(verb)
+
+==>Variable:Is a container in which we can store value for using again and again.
+
+==>JavaScript primitives datatypes.
+1.Numbers
+2.String
+3.Boolean
+4.Undefined
+5.NULL
+
+==>Javascript has dynamic typing:datatypes are automatically assigned to variables.
+
+==>Variable name can not start with numbers or symbols except $ and _ 
+==>javascript keywords can not be variable name.
+
+==>Javascript comments.
+1.Single line(//)
+2.Multiline(/*  */)
+
+==>Javascript operators
+Math operators
+1.-
+2.+
+3.*
+4./
+
+Logical operator
+1.>
+2.<
+
+3.Typeof operator
+1.typeof 
