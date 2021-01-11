@@ -1,0 +1,41 @@
+span{
+	font-size: 40px;
+	font-weight: bold;
+}
+img{
+	border-radius: 50%;
+	width: 70px;
+	height: 70px;
+	margin-top: 40px;
+}
+.img1{
+	margin-left: 70px;
+}
+
+#div1{
+	margin-left: 250px;
+	
+
+}
+#div2{
+
+	margin-left: 550px;
+
+}
+#div3{
+	margin-left: 850px;
+}
+div{
+	position: fixed;
+	height: 20%;
+	width: 15%;
+	
+}
+.box{
+	height: 300px;
+	width: 250px;
+	border:1px;
+	box-shadow:0 0.125rem 0.25rem rgba(0,0,0,0.075);
+	padding: 8px;
+	margin: 30px;
+}
