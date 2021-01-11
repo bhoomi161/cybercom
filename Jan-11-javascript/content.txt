@@ -1,0 +1,129 @@
+1.if else statement
+==>It is a conditional statement used to make decision using code.
+==>We can also use only if statement.
+
+Syntax:
+if(condition){
+	statements to be executed if condition is true...
+}
+
+==>We can also use if...else statement.
+
+Syntax:
+if(condition){
+	Statements to be executed if condition is true.
+}
+else{
+		Statements to be executed if condition is false.
+
+}
+
+2.if...else if...else statements
+==>We can also have mutiple condition at that time if...else if...else statements is used.
+==>For e.g:Number can positive,negative or zero.
+
+Syntax:
+if(condition){
+	Statements to be executed if condition is true.
+}
+else if(condition){
+	Statements to be executed if this condition is true.
+}
+else{
+	Statements to be executed if any of the above condition do not match
+}
+
+****Boolean logic****
+==>We can also give multiple condition in single condition using logical operator AND(&&),OR(||) and NOT(!).
+
+AND : returns true if both condition is true.
+OR: returns true if any of one condition true.
+NOT : returns true if condition is false and vica versa.
+
+3.Ternary/conditional operator
+==>It allows us to write if else statement in a single line.
+==>It has three operands.
+
+Syatax:
+condition?Statement to be executed if condition is true(It is like a if statement):Statement to be executed if condition is true(It is like a else statemnt)
+
+==>When we have long if..else if...else statement at that time we can also use switch statement instead of it.
+
+Syntax:
+
+switch(expression){
+	case value1:code block;
+				break;
+	case value2:code block;
+				break;
+	case value3:code block;
+				break;
+	case valueN:code block;
+				break;
+	default:default code block;
+				break;
+}
+
+4.Truthy and falsy values
+==>Falsy values:undefined,zero,NULL,empty string, NaN(not a number)
+==>Truthy values:are all the values that are considered true when evaluated in if else block.
+
+***Equality operator(==)
+==>It does not provide strict checking it means if we compare 23 with '23' then it will first assign '23' to variable and then check so we can use (===) for comparsion.
+
+5.functions
+==>If we have piece of code which we want to execute again and again then put it into a function instead of writing it over and over again.
+==>Function is like a container it has some line of code and arguments.
+==>Function can have 0 or N no.of arguments.
+==>Function can also have return statement.
+==>Function can call another function.
+
+Syntax:
+function function_name(argumentlist){
+	statements to be executed
+	return statement(Not mandatory)
+} 
+
+6.function statements and expressions
+==>Another way of writing function is function expressions.
+Syntax:
+var function_name=function(argument list){
+	
+}
+
+7.Array
+==>Array is a collection of multiple variables that can even have different datatypes.
+==>Array index starts with 0.
+==>We can declare array in different way.
+==>We can add element at last index in array using push()
+==>We can add element at first index in array using unshift()
+==>We can remove last element from the array using pop()
+==>We can remove first element from the array using shift()
+==>If we want to know about the value at which place it is stored then indexOf() is helpful.If the value is not present in the array then it will return -1.
+
+
+for e.g:
+(1)var array_name=[item1,item2,...,itemN]
+(2)var array_name=new array(item1,item2,...,itemN)
+
+
+****HTML Form****
+
+==>Difference between button and submit:
+button is used to perform specific operation.while submit is used to transfer from one place to another.
+
+==>We should not give same name for id and name property of field.
+
+1.input type="text":Used to take input from user
+
+2.password field:Used to take password
+
+3.radio button:for selecting one value from list like gender.
+
+4.checkbox
+
+5.file upload
+
+6.textarea:multiple line of input
+
+(aestrick,only pdf)
