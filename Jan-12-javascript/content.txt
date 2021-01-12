@@ -1,0 +1,48 @@
+1.How our javascript code is executed?
+
+==>Javascript always require some environment and i.e most typically a browser such as Google Chrome,Firefox,Safari etc.. and this is where javascript runs.
+
+==>Javascript engine test our code and execute.
+
+==>Javascript engine is a program that execute javascript code.
+
+==>There are many engines like google, v8,spider monkey and many more.
+
+==>The first thing that happens inside engine i.e code is parse by a parser which reads our code line by line and checks the syntax it means parser knows about the javascript rules.If there is some mistake inside code then it throws error and stop the execution otherwise produce data structure which is abstract syntax tree.
+
+==>Abstract syntax tree is related to machine code it means it is no longer javascript code ,it is set of instruction can be executed by computer.And it runs and produces output.
+
+
+
+2.Execution context
+
+==>All javascript code needs environment to run and this environment is called execution context.
+
+==>Default execution context is global.In which code is not inside any function.
+
+==>Global execution context is related to global object.and in browser it is window object.
+
+==>Execution context object have three properties.
+1.Variable Object(VO)
+2.Scope chain
+3."this" variable
+
+==>When function runs in execution context it is top of the execution stack and this happens in two phases.
+1.Creation phase
+
+	1)Creation of variable object
+	-->Argument object is created containing all the arguments passed to the function.
+	-->Code is scanned for function declarations.for each function property is created in the variable object.Pointing to a function.
+	-->Code is scanned for variable declarations.for each variable property is created in the variable object.Set to undefined.
+	-->function declarations and variable declaration is called Hoisting.
+	-->Function and variable hoisting in javascript means they are available before execution phase actually starts.
+
+	2)creation of the scope chain
+	-->It means which function can access which variable in the code.
+
+	3)determine the value of "this" variable
+	-->'this' variable is a variable which each and every execution context gets.and it is stored in execution context object.
+
+2.Execution phase
+	the code is executed line by line.
+
