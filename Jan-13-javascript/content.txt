@@ -1,0 +1,11 @@
+**DOM**
+-->DOM stands for Document Object Model.
+-->DOM is a stuructural representation of HTML document.
+-->DOM is used to connect webpages with scripts like javascript.
+-->DOM is a fully object oriented representation ,so for each HTML box there is an object in the DOM that we can access and interact with.
+
+**Events
+-->Notifications that are sent to notify the code that somrthing happend to webpage.e.g.clicking a button,resizing a window,scrolling down or pressing key.
+
+**Event listner
+-->A function that perform an action based on a certain event.It waits for a specific event to happen.
