@@ -1,0 +1,62 @@
+-->In javascript everything is an object.
+
+-->In javascript two types of datatypes.
+1.Primitives
+	-Numbers
+	-Strings
+	-Booleans
+	-Undefined
+	-Null
+2.Everything Else
+	-Arrays
+	-Functions
+	-Objects
+	-Dates
+	-Wrappers for numbers,strings,booleans
+
+	....Is an object
+
+-->In javascript object is not for just storing bunch of data but for really complex thing under surface.
+
+**Object Oriented Programming**
+
+-->OOP makes heavy use of object,methods and properties.
+
+-->Object interact with another object through methods for making complex application.
+
+-->We use object to store data,structure code and keep our code clean.
+
+-->We can also have constructor(blue print) from which we can create many instances.
+
+
+**Inheritance**
+
+-->It means one object is based on another objects.and one object can access the variables,methods and properties of another object.
+
+-->Javascript is prototype based language which means inheritance work by something called prototype.Which means in javascript each and every object has prototype which makes inheritance possible in javascript.
+
+-->Every javascript object has prototype property which makes inheritance possible.
+
+-->Prototype property of object is where we put methods and properties that we want other objects to inherit.
+
+-->The constructor prototype property is not the prototype of constructor itself,it is prototype of all instances created through it.
+
+-->When a certain method is called ,the search starts in the object itself ,and if it can not found,the search moves on to the object's prototype.this continue till method is not found and this is known as prototype chain.
+
+**Primitive v/s Object**
+
+-->Difference between primitive and object is primitives holds the value inside variableand object has a reference.
+
+**Function**
+
+-->Functions are also object in javascript.
+
+-->Function is an instance of an object type.
+
+-->Function behaves like any other object.
+
+-->We can store function in a variable.
+
+-->We can pass function as an argument to another function.
+
+-->We can return a function from a function.
