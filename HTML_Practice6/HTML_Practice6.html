@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML Practice 6</title>
+	<script type="text/javascript">
+		function display(){
+			alert("Your request has been submitted");
+		}
+	</script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header><h1>CONTACT US</h1></header>
+	<form>
+	<div style="max-width:300px;margin:auto">
+		<div class="input-icons">
+			<i class="fa fa-user icon form-margin"></i>
+			<input type="text" class="input-field form-margin" name="Username" id="unm" placeholder="Full Name">
+
+			<i class="fa fa-envelope icon item-margin"></i>
+			<input type="email" class="input-field item-margin" name="E-mail" id="email" placeholder="E.g enterprise@gmail.com" />
+		
+			<i class="fa fa-phone icon item-margin"></i>
+			<input type="text" class="input-field item-margin" name="Mobile No" id="contact" placeholder="E.g +1 800000000"/>
+		
+			<i class="fa fa-comment-o icon item-margin"></i>
+			<textarea rows="5" cols="33" class="input-field item-margin" name="Comments" id="comment" placeholder="Your Comments...."></textarea>
+			
+	</div>
+</div>
+	<button onclick="display()" class="form-margin" id="send" name="Send Now">Send Now</button>
+	</form>
+</body>
+</html>
