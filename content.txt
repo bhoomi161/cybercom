@@ -1,0 +1,8 @@
+**Function returning function**
+
+-->Function can also return a function.
+-->function which doen't have any name is called annonyms function.
+
+**CLOSURES**
+
+-->An inner function has access to the variables and parameters of it's outer function,even after the outer function has returned.
