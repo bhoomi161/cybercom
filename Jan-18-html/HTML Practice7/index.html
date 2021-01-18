@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML Practice 7</title>
+<link rel="stylesheet" type="text/css" href="style.css"></head>
+<body>
+	<form action="success.html">
+		<fieldset>
+			<legend>Your address</legend>
+			
+		<div>
+			<label>First name</label>
+			<input type="text" name="first name" id="fnm" class="left-margin"><br/>
+		</div>
+
+		<div class="top-margin">
+			
+			<label>Last name</label>
+			<input type="text" name="Last name" id="lnm" class="left-margin"><br/>
+		</div>
+			
+		<div class="top-margin">	
+			<label>Street</label>
+			<input type="text" name="street" id="street" class="left-margin-street"><br/>
+		</div>
+
+		<div class="top-margin">	
+			<label>City</label></td>
+			<input type="text" name="City" id="city" class="left-margin-city">
+		</div>
+			
+		</fieldset>
+		<fieldset>
+			
+			<legend>Additional details</legend>
+		<div class="top-margin">
+				<label>Biography</label>
+				<textarea row="2" cols="22" class="left-margin"></textarea>
+		</div>
+			
+		<div class="top-margin">
+			<label>Image</label>
+			<input type="file" name="Image" id="imgtoupload" class="left-margin-street">
+		</div>
+
+		<div class="top-margin">
+			<label>Age Group</label>
+			<select id="age group" name="age" class="left-margin">
+				<option value="0 to 9 years">0 to 9 Years</option>
+				<option value="10 to 18 Years">10 to 18 Years</option>
+				<option value="19 to 27 years">19 to 27 Years</option>
+				<option value="28 to 36 Years">28 to 36 Years</option>
+			</select>
+		</div>
+				
+		</fieldset>
+		<fieldset>
+			
+			<legend>Interests</legend>
+		<div class="top-margin">
+			<label>Hobbies</label>
+			<textarea class="left-margin-hobbies">Playing soccer Dancer Gardening Watching movies</textarea>
+			
+		</div>
+
+		<div class="top-margin">
+			<label>Favourite car?</label>
+			<select id="cars" name="cars" class="left-margin-car">
+				<option value="Volvo">Volvo</option>
+				<option value="BMW">BMW</option>
+				<option value="Fortuner">Fortuner</option>
+			</select>
+		</div>
+		<div class="top-margin">
+			<label>Favourite public transport?</label>
+			<textarea class="left-margin-transport">Ground &nbsp;&nbsp;Train  &nbsp;&nbsp;Bus Water</textarea>
+		</div>
+			
+		</fieldset>
+		<button type="submit" value="Submit" id="submit">Submit</button>
+		<button type="reset" value="Reset" id="reset">Reset</button>
+	</form>
+</body>
+</html>

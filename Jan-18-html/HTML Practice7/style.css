@@ -1,0 +1,33 @@
+.top-margin{
+	margin-top:10px;
+}
+.left-margin{
+	margin-left: 150px;
+}
+.left-margin-street{
+	margin-left: 180px;
+}
+.left-margin-city{
+	margin-left: 190px;
+}
+.left-margin-hobbies{
+	height: 60px;
+	width: 110px;
+	margin-left: 170px;
+	resize: none;
+}
+.left-margin-car{
+	margin-left: 130px;
+}
+.left-margin-transport{
+	margin-left: 50px;
+	resize: none;
+	height: 60px;
+	width: 60px;
+}
+button{
+	margin-left: 100px;
+	font-weight: bold;
+	font-size: 20px;
+	margin-top: 20px;
+}
