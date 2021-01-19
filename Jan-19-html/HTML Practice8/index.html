@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML Practice 8</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<script type="text/javascript">
+		function addOption(selectbox,text,value){
+			var opt=document.createElement("option");
+			opt.text=text;
+			opt.value=value;
+			selectbox.options.add(opt);
+		}
+		function addOption_data(){
+			for(var i=1;i<=31;i++){
+				 addOption(document.register_form.day_list, i, i);
+            }
+            for (var i = 1; i <= 12; ++i) {
+                addOption(document.register_form.month_list, i, i);
+            }
+            for (var i = 1900; i < 2006; ++i) {
+                addOption(document.register_form.year_list, i, i);
+            }
+        }
+			
+	</script>
+</head>
+<body onload="addOption_data()">
+		<form  method="POST" name="register_form" action="information.php">
+			<h3>Personal Information</h3>
+			<label class="fnm">First Name:</label>
+			<input type="text" name="firstname" id="fnm" required><br/>
+
+			<label class="lnm">Last Name:</label>
+			<input type="text" name="lastname" id="lnm"><br />
+
+			<label class="dob">Date of Birth:</label>
+			
+			<select name="month_list" required>
+				<option value="">Month</option>
+			</select>
+			<select name="day_list" required>
+				<option value="">Day</option>
+			</select>
+			<select name="year_list" required>
+				<option value="">Year</option>
+			</select>
+			<span><i class="fa fa-question-circle" style="color:blue"></i></span><br/>
+
+			<label class="gender">Gender:</label>
+			<select>
+				<option>Choose a Gender</option>
+				<option value="Male">Male</option>
+				<option value="Female">Female</option>
+			</select>
+			<span><i class="fa fa-question-circle" style="color:blue"></i></span><br>
+
+		<h3>Account Information</h3>
+
+			<label class="email">Email:</label>
+			<input type="text" name="email" id="email" required><br/>
+			<label class="newlabel">(Your email address will be your username)</label>
+			<br/>
+
+			<label class="remail">Re-type Email:</label>
+			<input type="text" name="Remail" id="Remail"><br/>
+
+			<label class="pwd">Password:</label>
+			<input type="password" name="pwd" id="pwd" required><br/>
+			<label class="newlabel">(Min 8 characters,1 number,case-sensitive)</label>
+			<br/>
+
+			<label class="rpwd">Re-type Password:</label>
+			<input type="password" name="rpwd" id="rpwd"><br/>
+
+			<label class="rpwd">Security Question:</label>
+			<select>
+				<option>Choose a security question</option>
+			</select>
+			<span><i class="fa fa-question-circle" style="color:blue"></i></span><br/>
+
+			<label class="sans">Security Answer:</label>
+			<input type="text" name="answer" id="answer"><br/>
+			<label class="newlabel">(Not case-sensitive)</label>
+
+		<h3>Contact Information</h3>
+
+		<label class="address">Address:</label>
+		<input type="text" name="address" id="address"><br/>
+
+		<label class="city">City:</label>
+		<input type="text" name="city" id="city"><br/>
+
+		<label class="state">State:</label>
+		<select>
+			<option>Choose a state</option>
+			<option value="Gujarat">Gujarat</option>
+			<option value="Bihar">Bihar</option>
+			<option value="Assam">Assam</option>
+			<option value="Andhra Pradesh">Andhra Pradesh</option>
+			<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+			<option value="Madhya Pradesh">Madhya Pradesh</option>
+			<option value="Maharashtra">Maharashtra</option>
+		</select><br/>
+
+		<label class="zipcode">Zip Code:</label>
+		<input type="text" name="zipcode" id="zipcode" class="code">
+		<input type="text" name="ozipcode" id="ozipcode" placeholder="optional" class="code"><br/>
+
+		<label class="ph">Phone:</label>
+		<input type="text" name="phone" id="phone" class="phone" required>
+		<span><i class="fa fa-question-circle" style="color:blue"></i></span>
+		<select>
+			<option>Mobile</option>
+		</select><br>
+		<label class="newlabel">No spaces or dashes</label><br>
+
+		<button type="submit" value="submit" id="submit">Submit</button>
+		<button type="reset" value="reset" id="reset">Reset</button>
+		</form>
+	
+</body>
+</html>
