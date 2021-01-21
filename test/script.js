@@ -1,12 +1,15 @@
+//function checks the email and password
 function login(){
 	
 	var email=document.getElementById("login_email").value;
 	var password=document.getElementById("login_pwd").value;
 
+	//Fetching the admin data from localstorage 
 	var AdminData=localStorage.getItem("AdminData");
 	var CheckAdmin=JSON.parse(AdminData);
 	AdminData=CheckAdmin;
 
+	//Fetching the user data from localstorage 
 	var UserData=localStorage.getItem("UserData");
 	var CheckUser=JSON.parse(UserData);
 	UserData=CheckUser;
@@ -20,16 +23,17 @@ function login(){
 	else if(useremail && userpwd){
 		window.location.href="D:/test/user.html";
 	}
-
 	else{
 		alert("Please enter correct credentials...");
 	}
 }
+//Redirects to register page
 function register_now(){
 
 	window.location.href="D:/test/register.html";
 
 }
+//Check password and confirm password match or not
 function chk_pwd(){
 	var pwd=document.getElementById('register_pwd').value;
 	var cpwd=document.getElementById('register_cpwd').value;
