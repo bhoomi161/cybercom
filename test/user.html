@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User file</title>
+</head>
+<body>
+	<section>
+			<h3>Add User</h3>
+			<form>
+				<input type="text" id="fname" name="fname" placeholder="Name">
+				<input type="email" id="mail" name="mail" placeholder="Email">
+				<input type="password" id="d_pwd" name="d_pwd" placeholder="Password">
+				<input type="Date" id="DOB" name="DOB" placeholder="BirthDate">
+				<input type="button" id="addUser" name="addUser" value="Add User" onclick="UserAdd()">
+			<form>
+		</section>
+		<header>
+			<h3> User Table </h3>
+		</header>
+		<section>
+			<table border="1">
+				<thead>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Password</th>
+					<th>BirthDate</th>
+					<th>Age</th>
+					<th>Actions</th>
+				</thead>
+				<tbody id="body"></tbody>
+			</table>
+		</section>
+		
+</body>
+</html>

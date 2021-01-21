@@ -4,7 +4,7 @@
 	<title>Registration</title>
 	<script type="text/javascript" src="script.js"></script>
 </head>
-<body onload="chk_registered()">
+<body>
 		<form>
 			<input type="text" name="register_name" id="register_name" placeholder="Name" pattern="[A-Za-z]{1,10}" required><br/>
 
@@ -13,7 +13,7 @@
 			<input type="password" name="register_pwd" id="register_pwd" placeholder="Password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required><br>
 
 			<input type="password" name="register_cpwd" id="register_cpwd" placeholder="Confirm Password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required onchange="chk_pwd()"><br/>
-			
+
 			<select name="city" required>
 				<option>Select City</option>
 				<option value="Ahmedabad">Ahmedabad</option>
