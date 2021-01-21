@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body onload="chk_registered()">
+		<form>
+			<input type="text" name="register_name" id="register_name" placeholder="Name" pattern="[A-Za-z]{1,10}" required><br/>
+
+			<input type="email" name="register_email" id="register_email" placeholder="Email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required><br/>
+
+			<input type="password" name="register_pwd" id="register_pwd" placeholder="Password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required><br>
+
+			<input type="password" name="register_cpwd" id="register_cpwd" placeholder="Confirm Password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required onchange="chk_pwd()"><br/>
+			
+			<select name="city" required>
+				<option>Select City</option>
+				<option value="Ahmedabad">Ahmedabad</option>
+				<option value="Rajkot">Rajkot</option>
+				<option value="Pune">Pune</option>
+				<option value="Mumbai">Mumbai</option>
+				<option value="Udaipur">Udaipur</option>
+				<option value="Jaipur">Jaipur</option>
+				<option value="Ludhiyana">Ludhiyana</option>
+				<option value="Manali">Manali</option>
+			</select><br/>
+
+			<select name="state" required>
+				<option>Select State</option>
+				<option value="Gujarat">Gujarat</option>
+				<option value="Maharashtra">Maharashtra</option>
+				<option value="Punjab">Punjab</option>
+				<option value="Rajasthan">Rajasthan</option>
+				<option value="Himachal Pradesh">Himachal Pradesh</option>
+			</select><br/>
+
+			<input type="checkbox" name="ch_terms" id="ch_terms">Terms & Conditions<br/>
+
+			<button name="btn_register" id="btn_register" onclick="register()">Register</button>		
+		</form>
+</body>
+</html>
