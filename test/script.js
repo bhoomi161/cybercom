@@ -1,7 +1,7 @@
 function login(){
 	
-	var email=document.getElementById('login_email').value;
-	var pwd=document.getElementById('login_pwd').value;
+	var email=document.getElementById("login_email").value;
+	var password=document.getElementById("login_pwd").value;
 
 	var AdminData=localStorage.getItem("AdminData");
 	var CheckAdmin=JSON.parse(AdminData);
@@ -11,8 +11,14 @@ function login(){
 	var CheckUser=JSON.parse(UserData);
 	UserData=CheckUser;
 
-	if(admin_email===AdminData[1] && admin_pwd===AdminData[2]){
-		window.location.href="file:///C:/Users/Gandhi/Desktop/test/dashboard.html";
+	var useremail=UserData.some((user)=>user.email===email);
+	var userpwd=UserData.some((user)=>user.password===password);
+
+	if(email===AdminData[0].email && password===AdminData[0].pwd){
+		window.location.href="D:/test/dashboard.html";
+	}
+	else if(useremail && userpwd){
+		window.location.href="D:/test/user.html";
 	}
 
 	else{
@@ -21,7 +27,7 @@ function login(){
 }
 function register_now(){
 
-	window.location.href="file:///C:/Users/Gandhi/Desktop/test/register.html";
+	window.location.href="D:/test/register.html";
 
 }
 function chk_pwd(){
@@ -38,11 +44,11 @@ function chk_pwd(){
 }
 function register(){
 
-	var admin_name=document.getElementById('admin_name').value;
-	var admin_email=document.getElementById('register_email').value;
-	var admin_pwd=document.getElementById('register_pwd').value;
-	var admin_city=document.getElementById('city').value;
-	var admin_state=document.getElementById('state').value;
+	var admin_name=document.getElementById("register_name").value;
+	var admin_email=document.getElementById("register_email").value;
+	var admin_pwd=document.getElementById("register_pwd").value;
+	var admin_city=document.getElementById("city").value;
+	var admin_state=document.getElementById("state").value;
 
 	var ArrOfAdmin=[];
 	var ObjOfAdmin={
@@ -50,12 +56,16 @@ function register(){
 		email:admin_email,
 		pwd:admin_pwd,
 		city:admin_city,
-		state:admin_city,
+		state:admin_state,
 	};
-	
+
 	ArrOfAdmin.push(ObjOfAdmin);
 	console.log(ArrOfAdmin);
 	localStorage.setItem("AdminData",JSON.stringify(ArrOfAdmin));
+
+	window.location.href="D:/test/login.html";
+	document.getElementById("Register_Now").disabled=true;
+
 
 }
 
@@ -64,7 +74,7 @@ function chk_login(){
 		var CheckAdmin=JSON.parse(AdminData);
 
 		AdminData=CheckAdmin;
-		if(CheckAdmin){
+		if(AdminData){
 			document.getElementById("Register_Now").disabled=true;
 		}
 }

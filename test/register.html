@@ -14,7 +14,7 @@
 
 			<input type="password" name="register_cpwd" id="register_cpwd" placeholder="Confirm Password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required onchange="chk_pwd()"><br/>
 
-			<select name="city" required>
+			<select name="city" id="city" required>
 				<option>Select City</option>
 				<option value="Ahmedabad">Ahmedabad</option>
 				<option value="Rajkot">Rajkot</option>
@@ -26,7 +26,7 @@
 				<option value="Manali">Manali</option>
 			</select><br/>
 
-			<select name="state" required>
+			<select name="state" id="state" required>
 				<option>Select State</option>
 				<option value="Gujarat">Gujarat</option>
 				<option value="Maharashtra">Maharashtra</option>
@@ -37,7 +37,7 @@
 
 			<input type="checkbox" name="ch_terms" id="ch_terms">Terms & Conditions<br/>
 
-			<button name="btn_register" id="btn_register" onclick="register()">Register</button>		
+			<input type="button" name="btn_register" id="btn_register" onclick="register()" value="Register">		
 		</form>
 </body>
 </html>

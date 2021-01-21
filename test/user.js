@@ -13,7 +13,7 @@ function UserAdd(){
 		DOB:DOB,
 	};
 	ArrOfUser.push(ObjOfUser);
-	localStorage.push("User",JSON.stringify(ArrOfUser));
+	localStorage.setItem("UserData",JSON.stringify(ArrOfUser));
 
 }
 function TableOfUser(){
@@ -29,9 +29,14 @@ function TableOfUser(){
 			<td>${user.password}</td>
 			<td>${user.DOB}</td>
 			<td></td>
-			<td><a href="edit.html">edit</a><a href="delete.html"></a></td>
+			<td><a href="javascript:edit()">edit</a><a href="delete.html" onclick="delete()"></a></td>
+
 			</tr>`);
 	}
 	var tbody=document.querySelector("#body");
 	tbody.innerHTML=TableData;
+
+function edit(){
+		console.log("Edit..");
+	}
 }
