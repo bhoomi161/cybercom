@@ -1,0 +1,326 @@
+5. Control Structures
+
+==>The general style rules for control structures are as follows:
+
+-->There MUST be one space after the control structure keyword
+-->There MUST NOT be a space after the opening parenthesis
+-->There MUST NOT be a space before the closing parenthesis
+-->The structure body MUST be indented once
+-->The body MUST be on the next line after the opening brace
+-->The closing brace MUST be on the next line after the body
+
+-->The body of each structure MUST be enclosed by braces. This standardizes how the structures look and reduces the likelihood of introducing errors as new lines get added to the body.
+
+5.1 if,elseif,else
+
+-->An if structure looks like the following. Note the placement of parentheses, spaces, and braces; and that else and elseif are on the same line as the closing brace from the earlier body.
+
+<?php
+
+if ($expr1) {
+    // if body
+} elseif ($expr2) {
+    // elseif body
+} else {
+    // else body;
+}
+
+-->The keyword elseif SHOULD be used instead of else if so that all control keywords look like single words.
+
+-->Expressions in parentheses MAY be split across multiple lines, where each subsequent line is indented at least once. When doing so, the first condition MUST be on the next line. The closing parenthesis and opening brace MUST be placed together on their own line with one space between them. Boolean operators between conditions MUST always be at the beginning or at the end of the line, not a mix of both.
+
+<?php
+
+if (
+    $expr1
+    && $expr2
+) {
+    // if body
+} elseif (
+    $expr3
+    && $expr4
+) {
+    // elseif body
+}
+
+5.2 switch, case
+
+-->A switch structure looks like the following. 
+
+-->Note the placement of parentheses, spaces, and braces. The case statement MUST be indented once from switch, and the break keyword (or other terminating keywords) MUST be indented at the same level as the case body. There MUST be a comment such as // no break when fall-through is intentional in a non-empty case body.
+
+<?php
+
+switch ($expr) {
+    case 0:
+        echo 'First case, with a break';
+        break;
+    case 1:
+        echo 'Second case, which falls through';
+        // no break
+    case 2:
+    case 3:
+    case 4:
+        echo 'Third case, return instead of break';
+        return;
+    default:
+        echo 'Default case';
+        break;
+}
+-->Expressions in parentheses MAY be split across multiple lines, where each subsequent line is indented at least once. When doing so, the first condition MUST be on the next line. The closing parenthesis and opening brace MUST be placed together on their own line with one space between them. Boolean operators between conditions MUST always be at the beginning or at the end of the line, not a mix of both.
+
+<?php
+
+switch (
+    $expr1
+    && $expr2
+) {
+    // structure body
+}
+
+5.3 while, do while
+
+-->A while statement looks like the following. Note the placement of parentheses, spaces, and braces.
+
+<?php
+
+while ($expr) {
+    // structure body
+}
+
+-->Expressions in parentheses MAY be split across multiple lines, where each subsequent line is indented at least once. When doing so, the first condition MUST be on the next line. The closing parenthesis and opening brace MUST be placed together on their own line with one space between them. Boolean operators between conditions MUST always be at the beginning or at the end of the line, not a mix of both.
+
+<?php
+
+while (
+    $expr1
+    && $expr2
+) {
+    // structure body
+}
+
+-->Similarly, a do while statement looks like the following. Note the placement of parentheses, spaces, and braces.
+
+<?php
+
+do {
+    // structure body;
+} while ($expr);
+
+-->Expressions in parentheses MAY be split across multiple lines, where each subsequent line is indented at least once. When doing so, the first condition MUST be on the next line. Boolean operators between conditions MUST always be at the beginning or at the end of the line, not a mix of both.
+
+<?php
+
+do {
+    // structure body;
+} while (
+    $expr1
+    && $expr2
+);
+
+5.4 for
+
+-->A for statement looks like the following. Note the placement of parentheses, spaces, and braces.
+
+<?php
+
+for ($i = 0; $i < 10; $i++) {
+    // for body
+}
+
+-->Expressions in parentheses MAY be split across multiple lines, where each subsequent line is indented at least once. When doing so, the first expression MUST be on the next line. The closing parenthesis and opening brace MUST be placed together on their own line with one space between them.
+
+<?php
+
+for (
+    $i = 0;
+    $i < 10;
+    $i++
+) {
+    // for body
+}
+
+5.5 foreach
+
+-->A foreach statement looks like the following. Note the placement of parentheses, spaces, and braces.
+
+<?php
+
+foreach ($iterable as $key => $value) {
+    // foreach body
+}
+
+5.6 try, catch, finally
+
+-->A try-catch-finally block looks like the following. Note the placement of parentheses, spaces, and braces.
+
+<?php
+
+try {
+    // try body
+} catch (FirstThrowableType $e) {
+    // catch body
+} catch (OtherThrowableType | AnotherThrowableType $e) {
+    // catch body
+} finally {
+    // finally body
+}
+
+6. Operators
+
+-->Style rules for operators are grouped by arity (the number of operands they take).
+
+-->When space is permitted around an operator, multiple spaces MAY be used for readability purposes.
+
+-->All operators not described here are left undefined.
+
+6.1. Unary operators
+
+-->The increment/decrement operators MUST NOT have any space between the operator and operand.
+
+$i++;
+++$j;
+
+-->Type casting operators MUST NOT have any space within the parentheses:
+
+$intValue = (int) $input;
+
+6.2. Binary operators
+
+-->All binary arithmetic, comparison, assignment, bitwise, logical, string, and type operators MUST be preceded and followed by at least one space:
+
+if ($a === $b) {
+    $foo = $bar ?? $a ?? $b;
+} elseif ($a > $b) {
+    $foo = $a + $b * $c;
+}
+
+6.3. Ternary operators
+
+-->The conditional operator, also known simply as the ternary operator, MUST be preceded and followed by at least one space around both the ? and : characters:
+
+$variable = $foo ? 'foo' : 'bar';
+
+-->When the middle operand of the conditional operator is omitted, the operator MUST follow the same style rules as other binary comparison operators:
+
+$variable = $foo ?: 'bar';
+
+7. Closures
+
+-->Closures MUST be declared with a space after the function keyword, and a space before and after the use keyword.
+
+-->The opening brace MUST go on the same line, and the closing brace MUST go on the next line following the body.
+
+-->There MUST NOT be a space after the opening parenthesis of the argument list or variable list, and there MUST NOT be a space before the closing parenthesis of the argument list or variable list.
+
+-->In the argument list and variable list, there MUST NOT be a space before each comma, and there MUST be one space after each comma.
+
+-->Closure arguments with default values MUST go at the end of the argument list.
+
+-->If a return type is present, it MUST follow the same rules as with normal functions and methods; if the use keyword is present, the colon MUST follow the use list closing parentheses with no spaces between the two characters.
+
+-->A closure declaration looks like the following. Note the placement of parentheses, commas, spaces, and braces:
+
+<?php
+
+$closureWithArgs = function ($arg1, $arg2) {
+    // body
+};
+
+$closureWithArgsAndVars = function ($arg1, $arg2) use ($var1, $var2) {
+    // body
+};
+
+$closureWithArgsVarsAndReturn = function ($arg1, $arg2) use ($var1, $var2): bool {
+    // body
+};
+
+-->Argument lists and variable lists MAY be split across multiple lines, where each subsequent line is indented once. When doing so, the first item in the list MUST be on the next line, and there MUST be only one argument or variable per line.
+
+-->When the ending list (whether of arguments or variables) is split across multiple lines, the closing parenthesis and opening brace MUST be placed together on their own line with one space between them.
+
+-->The following are examples of closures with and without argument lists and variable lists split across multiple lines.
+
+<?php
+
+$longArgs_noVars = function (
+    $longArgument,
+    $longerArgument,
+    $muchLongerArgument
+) {
+   // body
+};
+
+$noArgs_longVars = function () use (
+    $longVar1,
+    $longerVar2,
+    $muchLongerVar3
+) {
+   // body
+};
+
+$longArgs_longVars = function (
+    $longArgument,
+    $longerArgument,
+    $muchLongerArgument
+) use (
+    $longVar1,
+    $longerVar2,
+    $muchLongerVar3
+) {
+   // body
+};
+
+$longArgs_shortVars = function (
+    $longArgument,
+    $longerArgument,
+    $muchLongerArgument
+) use ($var1) {
+   // body
+};
+
+$shortArgs_longVars = function ($arg) use (
+    $longVar1,
+    $longerVar2,
+    $muchLongerVar3
+) {
+   // body
+};
+
+-->Note that the formatting rules also apply when the closure is used directly in a function or method call as an argument.
+
+<?php
+
+$foo->bar(
+    $arg1,
+    function ($arg2) use ($var1) {
+        // body
+    },
+    $arg3
+);
+
+8. Anonymous Classes
+
+-->Anonymous Classes MUST follow the same guidelines and principles as closures in the above section.
+
+<?php
+
+$instance = new class {};
+
+-->The opening brace MAY be on the same line as the class keyword so long as the list of implements interfaces does not wrap. If the list of interfaces wraps, the brace MUST be placed on the line immediately following the last interface.
+
+<?php
+
+// Brace on the same line
+$instance = new class extends \Foo implements \HandleableInterface {
+    // Class content
+};
+
+// Brace on the next line
+$instance = new class extends \Foo implements
+    \ArrayAccess,
+    \Countable,
+    \Serializable
+{
+    // Class content
+};
