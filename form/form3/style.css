@@ -1,0 +1,36 @@
+#yellow{
+	background-color: #e69c09;
+	color: yellow;
+	height: 40px;
+	width: 450px;
+	font-size: 20px;
+	margin-left: 400px;
+
+}
+#blue{
+	background-color: #110345;
+	color: yellow;
+	font-size: 20px;
+	width: 450px;
+	margin-left: 400px;
+
+}
+form{
+	
+	height: 300px;
+	width: 700px;
+	padding: 30px;
+}
+input[type="submit"]{
+	margin-left: 250px;
+	background-color: green;
+	height: 30px;
+	width: 80px;
+	color: white;
+}
+input[type="reset"]{
+	background-color: red;
+	height: 30px;
+	width: 80px;
+	color: white;
+}
