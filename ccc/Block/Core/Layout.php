@@ -14,16 +14,16 @@ class Layout extends \Block\Core\Template
 	public function __construct(\Controller\Core\Admin $controller=null)
 	{
 		$this->setTemplate('View/core/layout/oneColumn.php');
-		// $this->prepareChildren();
+		$this->prepareChildren();
 	}
 
-	// public function prepareChildren(){
-	// 	$this->addChild(new \Block\Core\Layout\Header(),'header');
-	// 	$this->addChild(new \Block\Core\Layout\Left(),'left');
-	// 	$this->addChild(new \Block\Core\Layout\Content(),'content');
-	// 	$this->addChild(new \Block\Core\Layout\Footer(),'footer');
+	public function prepareChildren(){
+		$this->addChild(new \Block\Core\Layout\Header(),'header');
+		$this->addChild(new \Block\Core\Layout\Left(),'left');
+	 	$this->addChild(new \Block\Core\Layout\Content(),'content');
+		$this->addChild(new \Block\Core\Layout\Footer(),'footer');
 
-	// }
+	 }
 	public function getContent()
     {
         return $this->getChild('content');
